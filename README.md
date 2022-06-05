@@ -96,31 +96,41 @@
   
 •	상태
   
-  running
-  
-  done
-  
-  done(code)
-  
-  stopped
-  
-  stopped(sigtstp)
-  
-  stopped(sigstop)
-  
-  stopped(sigttou)
+ Running - 작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임
+
+ Done - 작업이 완료되어 0을 반환하고 종료 했음을 의미
+
+ Done(code) - 작업이 정삭적으로 완료되었으며, 0이 아닌 코드를 반환 했음을 의미
+
+ Stopped - 작업이 일시 중단
+
+ Stopped(SIGTSTP) - SIGTSTP 신호가 작업을 일시 중단
+
+ Stopped(SIGSTOP) - SIGSTOP 신호가 작업을 일시 중단
+
+ Stopped(SIGTTIN) - SIGTTIN 신호가 작업을 일시 중단
+
+ Stopped(SIGTTOU) - SIGTTOU 신호가 작업을 일시 중단
   
  
 •	옵션
   
- -l 
-  
+  -l
+
+ 프로세스 그룹 ID를 state 필드 앞에 출력
+
  -n
-  
+
+ 프로세스 그룹 중에 대표 프로세스 ID를 출력
+
  -p
-  
+
+ 각 프로세스 ID에 대해 한 행씩 출력
+
  command
 
+ 지정한 명령어를 실행
+  
 <kill>
   
 •	응답이 없는 프로세스나 불필요한 프로세스를 강제로 종료하려면 해당 프로세스의 PID를 알아야 한다. Ps -ef나 ps aux명령으로 프로세스의 정보를 확인하면 PID와 PPID를 볼 수 있다. 프로세스를 종료하는 데는 kill과 pkill 명령을 사용한다. 이 명령들은 프로세스에 시그널을 보내어 프로세스를 종료한다.
