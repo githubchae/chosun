@@ -95,15 +95,43 @@
   o	jobs [옵션][작업번호]
   
 •	상태
+  
+  running
+  
+  done
+  
+  done(code)
+  
+  stopped
+  
+  stopped(sigtstp)
+  
+  stopped(sigstop)
+  
+  stopped(sigttou)
+  
  
 •	옵션
- 
+  
+ -l 
+  
+ -n
+  
+ -p
+  
+ command
 
 <kill>
   
 •	응답이 없는 프로세스나 불필요한 프로세스를 강제로 종료하려면 해당 프로세스의 PID를 알아야 한다. Ps -ef나 ps aux명령으로 프로세스의 정보를 확인하면 PID와 PPID를 볼 수 있다. 프로세스를 종료하는 데는 kill과 pkill 명령을 사용한다. 이 명령들은 프로세스에 시그널을 보내어 프로세스를 종료한다.
   
 •	kill 명령은 인자로 지정한 프로세스에 시그널을 전달한다.
+  
+  
+
+  
+  
+  
  
 
 2.	vim 에디터에서 매크로 사용방법에 대하여 조사하기 (q, @)
